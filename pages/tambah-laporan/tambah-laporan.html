@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>tambahLaporan</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!--<ion-item>
+    <ion-input type="text" [(ngModel)]="data.odp" placeholder="pilih ODP"></ion-input>
+  </ion-item>-->
+  <ion-list>
+    <ion-item>
+      <ion-label>pilih ODP</ion-label>
+      <ion-select [(ngModel)]="laporan.id_odp" multiple="false">
+        <ion-option *ngFor ="let data of datas" value={{data.id}} >{{data.nama_label}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-item>
+    <ion-textarea [(ngModel)]="laporan.keterangan" placeholder="keterangan gejala"></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <button ion-button (click)="tambah(laporan)"><ion-icon md="md-add-circle">Tambah</ion-icon></button>
+  </ion-item>
+</ion-content>

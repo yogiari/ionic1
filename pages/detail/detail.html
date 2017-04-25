@@ -1,0 +1,29 @@
+<!--
+  Generated template for the Detail page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>detail</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      {{item.nama_label}}
+    </ion-card-header>
+    <ion-card-content>
+      <p> nomor tiket : {{item.id_tiket}} </p>
+      <p>tanggal laporan : {{item.tanggal_lapor}} </p>
+      <p> status : {{item.status}} </p>
+      <p> tanggal selesai : {{item.tanggal_selesai}} </p>
+      <p> keterangan : {{item.keterangan}} </p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <button ion-button (click)="selesai()"><ion-icon md="md-done-all">Klik Untuk Close Tiket</ion-icon></button>
+  </ion-card>
+</ion-content>
